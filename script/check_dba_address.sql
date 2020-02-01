@@ -1,0 +1,9 @@
+DECLARE
+	l_dba   	NUMBER := TO_NUMBER ('010001ac','XXXXXXXX');
+	l_file  	NUMBER := DBMS_UTILITY.DATA_BLOCK_ADDRESS_FILE (l_dba);
+	l_block	NUMBER := DBMS_UTILITY.DATA_BLOCK_ADDRESS_BLOCK (l_dba);
+BEGIN
+	DBMS_OUTPUT.PUT_LINE ('File  : '||l_file);
+	DBMS_OUTPUT.PUT_LINE ('Block : '||l_block);
+END;
+

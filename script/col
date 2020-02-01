@@ -1,0 +1,5 @@
+
+select tablespace_name, extent_id, blocks, bytes
+from dba_extents
+where segment_name = 'EMP_TEST';
+
