@@ -52,7 +52,7 @@ ORDER BY x
 # X=Y, X<Y의 두개의 쿼리를 UNION 해서 결과를 출력
 SELECT X,Y
 FROM Functions
-WHERE X = Y
+WHERE X = Y 
 GROUP BY X,Y
 HAVING COUNT(*) = 2
 
