@@ -1,7 +1,7 @@
 # DML은 Data Manipulation Language
 1. INSERT
-    테이블 전체에 데이터 추가하는 방법
-    INSERT INTO 테이블명 VALUES(VALUE_LIST);
+    # 테이블 전체에 데이터 추가하는 방법
+    INSERT INTO 테이블명 VALUES (VALUE_LIST);
     -> 컬럼 순서대로 입력
 
     # 예시
@@ -16,21 +16,26 @@
     INSERT INTO Salary(Id,Salary) VALUES('2','550');
 
 2. UPDATE
-    컬럼 전체에 데이터 업데이트
+    # 컬럼 전체에 데이터 업데이트
+    # 데이터가 존재하고 있을 때, 그 데이터를 수정해줄 때 사용한다.
+    ```
     UPDATE 테이블명 SET 컬럼 = 값;
+    ```
 
-    UPDATE Salary SET Sallary = Salary + 100;
-
+    # UPDATE Salary SET Sallary = Salary + 100;
+    = 은 비교연산자가 아니다. 우변에 있는 값을 좌변에 대입을 한다.
+    ```
     UPDATE 테이블명 SET 컬럼 = 값 WHERE 조건식;
     UPDATE Salary SET Sallary = Salary + 100 WHERE Id = 2;
-
-3. DELETE
+    ```
+1. DELETE
     테이블에서 전체에 데이터 삭제하고 싶을 때
     DELETE FROM 테이블명;
 
     DELETE FROM Salary;
 
-    특정 행만 삭제하고 싶을 때.
+    # 특정 행만 삭제하고 싶을 때.
+    ```
     DELETE FROM 테이블명 WHERE  조건식;
     DELETE FROM Salary WHERE Id = 2 ;
-
+    ```
