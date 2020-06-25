@@ -16,3 +16,20 @@ FROM(
 GEOUP BY daily_stats.week
 
 ```
+
+# 결과
+week , date 의 결과가 나오게 된다.
+
+# WHERE 절 서브쿼리
+
+```
+#  서브쿼리의 결과가 하나가 나와야 한다.
+SELECT *
+FROM crimes
+WHERE date = (SELECT MIN(date) FROM crimes)
+
+#  서브쿼리의 결과가 복수로 나올 때 IN을 사용가능하다.
+SELECT *
+FROM crimes
+WHERE DATE IN (SELECT date FROM crimes ORDER BY date DESC LIMIT 5)
+```
