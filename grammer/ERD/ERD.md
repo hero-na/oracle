@@ -33,6 +33,6 @@ Entity Relationship Diagram의 약자. (객체 관계 다이어그램)
        - https://stackoverflow.com/questions/38677002/mysql-convert-string-to-datetime
      타임스탬프는 Datetime + Timezone 이 들어간다.
      컴퓨터는 datetime,timestamp를 문자형으로 이해하려고 한다.
-     현업에서는 + 1개월을 하거나 연산을 할 때, 무조건 날짜와 관련 된 함수여야 한다. String -> datetype으로 변경하는 함수가 있다. 
+     현업에서는 + 1개월을 하거나 연산을 할 때, 무조건 날짜와 관련 된 함수여야 한다. String -> datetype으로 변경하는 함수가 있다.
         - MySQL = str_to_date()
    # 날짜
