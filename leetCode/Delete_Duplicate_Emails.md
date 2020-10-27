@@ -62,5 +62,21 @@ WHERE t1.id = 1;
 ```
 # 셀프 조인을 활용해서 중복되는 값을 지우는 것이 가능하다.
 ```
+SELECT *
+FROM
+Person p1
+    INNER JOIN Person p2 ON p1.Email = p2.Email
+
+```
+# 결과
+p1.Id. p1.Email. p2.Id. p2.Email
+
+# 이 문제는 DELETE를 사용해야 한다.
+```
+DELETE p1
+FROM 
+Person p1
+    INNER JOIN Person p2 ON p1.Email = p2.Email
+WHERE p1.Id > p2.Id
 
 ```
