@@ -31,7 +31,7 @@ GROUP BY hacker_id ) sub
 ```
 
 ```
--- Answer
+-- Answer - MYSQL
 SELECT hackers.hacker_id
        , hackers.name
        , COUNT(*) challenges_created
@@ -84,11 +84,11 @@ ORDER BY challenges_created DESC, hacker_id
 ## WITH 를 쓰면 값을 저장 시킬 수 있다.
 
 ```
--- Answer
+-- Answer - MS SQL Server
 WITH counter AS(
     SELECT hackers.hacker_id
-            ,hackers.name
-            ,COUNT(*) AS challenges_created
+            , hackers.name
+            , COUNT(*) AS challenges_created
     FROM Challenges
         INNER JOIN Hackers ON Challenges.hacker_id = Hackers.hacker_id
     GROUP BY hackers.hacker_id, hackers.name

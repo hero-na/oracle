@@ -14,8 +14,9 @@ WHERE t1.id = 1;
 
 * 테이블이 하나인 경우 셀프 조인을 활용한다.
 ```
-DELETE p1,p2 
+DELETE p1
 SELECT Id
 FROM Person p1
 INNER JOIN Person p2 ON p1.Email = pe.Email
+WHERE p1.Id > p2.Id
 ```
